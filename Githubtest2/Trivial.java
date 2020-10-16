@@ -5,6 +5,7 @@ public class Trivial {
 		// TODO Auto-generated method stub
 
 		System.out.println("Program to check if github works");
+		System.out.println("This is the change");
 	}
 
 }
