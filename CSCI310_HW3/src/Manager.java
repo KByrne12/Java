@@ -1,5 +1,3 @@
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 
 public class Manager{
 	public static final int MAX_RESOURCES = 5;
