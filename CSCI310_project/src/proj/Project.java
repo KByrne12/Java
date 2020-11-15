@@ -15,21 +15,24 @@ public class Project {
 		int UPPERBOUND = 10;
 		
 		
-		int numberOfCustomers = rand.nextInt(UPPERBOUND) % UPPERBOUND + 1;
-		int numberOfResources = rand.nextInt(UPPERBOUND) % UPPERBOUND + 1;
+		int numberOfCustomers = rand.nextInt(UPPERBOUND) + 1;
+		int numberOfResources = rand.nextInt(UPPERBOUND) + 1;
+		
 		
 		int[] available;
 		int[][] maximum;
 		int[][] allocation;
 		
 		int[][] need;
+		int[] desired;
 		
 		MyThread[] customers;
 		
 		
 		for (int i = 0; i < numberOfCustomers; i++)
 		{
-			customers[i] = new MyThread(i); 
+			
+			customers[i] = new MyThread(i,need[i]); 
 		}
 		for (int i = 0; i < numberOfCustomers; i++)
 		{
