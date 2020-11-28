@@ -2,19 +2,19 @@ public class BankerThread extends Thread {
 
     Bank bank;
 
-    int costumerNum;
+    int customerNum;
 
-    public BankerThread(Bank b1, int costumerNum) {
+    public BankerThread(Bank b1, int customerNum) {
         this.bank = b1;
-        this.costumerNum = costumerNum;
+        this.customerNum = customerNum;
     }
 
     @Override
     public void run() {
         synchronized (bank) {
-            bank.requestResources(costumerNum);
-            bank.calculateCustomerNeed(costumerNum);
-            bank.runProcess(costumerNum);
+            bank.requestResources(customerNum);
+            bank.calculateCustomerNeed(customerNum);
+            bank.runProcess(customerNum);
         }
     }
 
